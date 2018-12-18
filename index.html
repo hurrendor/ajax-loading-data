@@ -11,25 +11,30 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-<body>
+<body class="clear">
 
-  <header>
+  <header class="clear">
     <h1>Countries 'R Us</h1>
     <form>
-      <label for="searchBar">Search <span class="fa fa-search displayNone"></span></label>
-      <input type="text" name="searchBar" placeholder="Search" />
-      <input type="button" name="searchButton" value="search">
+      <label for="dropdown">I want to.. <span class="fa fa-search displayNone"></span></label>
+      <select name="dropdown">
+        <option name="">Explore Countries</option>
+        <option name="">Find Hikes</option>
+        <option name="" onselect="htmlData()">Do a DoHickey</option>
+      </select>
+      <!-- <input type="text" name="searchBar" placeholder="Search" /> -->
+      <input type="button" name="searchButton" value="go">
     </form>
   </header>
 
-  <main>
+  <main class="clear" id="main">
     <article>
-      <h2>Country of the Week:</h2>
+      <h2>Country of the Week</h2>
       <h3>Ukraine</h3>
       <p>Some content that is relevant to my site's theme.</p>
     </article>
@@ -39,7 +44,7 @@
       <p>Some content that is relevant to my site's theme.</p>
     </article>
 
-    <article id="xml-show">
+    <!-- <article id="xml-show">
       <h2 class=""></h2>
       <h3 class=""></h3>
     </article>
@@ -54,11 +59,18 @@
     <article id="json-show">
       <h2 class=""></h2>
       <h3 class=""></h3>
-    </article>
+    </article> -->
 
 
   </main>
-  <script src="js/ajax.js"></script>
+
+  <footer class="clear">
+    <p><a href="https://hurrendor.com" target="_blank">&copy; Stacy Davis <script></script></a></p>
+  </footer>
+
+
+
+  <script async src="js/ajax.js"></script>
 
 </body>
 

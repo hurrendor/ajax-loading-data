@@ -1,3 +1,59 @@
 .displayNone {
   display: none;
 }
+.clear {
+  float: none;
+  clear: both;
+}
+
+html,
+header,
+main,
+article,
+footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  width: 100%;
+  background-image: url('../img/header-background.jpg');
+  background-position: center;
+  background-size: fill;
+}
+form {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1020px;
+}
+main article {}
+main article h2 {
+  width: 90%;
+  border-bottom: 2px solid red;
+}
+main article h3 {}
+footer {
+  padding: 8px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (min-width:768px) {
+  main article {
+    width: 50%;
+    float: left;
+  }
+}
