@@ -19,17 +19,15 @@
 <body class="clear">
 
   <header class="clear">
+
     <h1>Countries 'R Us</h1>
-    <form>
       <label for="dropdown">I want to.. <span class="fa fa-search displayNone"></span></label>
-      <select name="dropdown">
-        <option name="">Explore Countries</option>
-        <option name="">Find Hikes</option>
-        <option name="" onselect="htmlData()">Do a DoHickey</option>
+      <select id="dropdown" name="dropdown" onchange="loadData()">
+        <option name="default" value="null">...</option>
+        <option name="json" value="json">Explore Countries</option>
+        <option name="xml" value="xml">Find Hikes</option>
+        <option name="html" value="html">Do a DoHickey</option>
       </select>
-      <!-- <input type="text" name="searchBar" placeholder="Search" /> -->
-      <input type="button" name="searchButton" value="go">
-    </form>
   </header>
 
   <main class="clear" id="main">
@@ -68,9 +66,8 @@
     <p><a href="https://hurrendor.com" target="_blank">&copy; Stacy Davis <script></script></a></p>
   </footer>
 
-
-
   <script async src="js/ajax.js"></script>
+
 
 </body>
 

@@ -9,34 +9,63 @@
 // xhr.send(null);//send the request to the server
 
 
-/****Loading XML Example****/
-var xmlLoad = new XMLHttpRequest();
-
-xmlLoad.onload = function(
-  if(xmlLoad.status === 200) {
-    document.getElementById('main').innerHTML = xmlLoad.responseText;
-  }
-);
-
-xmlLoad.open('GET', 'data/mapData.xml', true);
-
-xmlLoad.send(null);
 
 
 
 /****Loading HTML Example****/
-// var htmlLoad = new XMLHttpRequest();
-//
-// htmlLoad.onload = function(
-//   if(htmlLoad.status === 200) {
-//     document.getElementById('content').innerHTML = htmlLoad.responseText;
-//   }
-// );
-//
-// htmlLoad.open('GET', 'data/data.html', true);
-//
-// htmlLoad.send(null);
 
+var selectForm = document.getElementById('dropdown');
+
+function loadData() {
+  var htmlSetup = new XMLHttpRequest();
+  var dataType = selectForm.value;
+  console.log(dataType);
+
+  htmlSetup.onload = function(){
+    console.log('htmlsetup.onload structured');
+    if(htmlSetup.status === 200) { //will not work locally, only on a server
+      document.getElementById('main').innerHTML = htmlSetup.responseText;
+    }
+    console.log('initialized');
+  };
+
+  // switch statement
+  switch(dataType) {
+    case 'html':
+    dataToLoad = 'data/data.html'
+    break;
+
+    case 'json':
+    dataToLoad = 'data/data.json'
+    break;
+
+    case 'xml':
+    dataToLoad = 'data/data.xml'
+    break;
+
+    default:
+    break;
+  }
+
+  console.log(dataToLoad);
+  htmlSetup.open('GET', dataToLoad, true);
+  htmlSetup.send(null);
+};
+
+  // console.log('htmlLoad init');
+
+/****Loading XML Example****/
+// var xmlLoad = new XMLHttpRequest();
+//
+// xmlLoad.onload = function(
+  //   if(xmlLoad.status === 200) {
+    //     document.getElementById('main').innerHTML = xmlLoad.responseText;
+    //   }
+    // );
+    //
+    // xmlLoad.open('GET', 'data/mapData.xml', true);
+    //
+    // xmlLoad.send(null);
 
 /****Loading JSON Example****/
 // var jsonLoad = new XMLHttpRequest();
