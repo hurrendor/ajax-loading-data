@@ -57,7 +57,8 @@ h2 {
   border-bottom: 2px solid red;
 }
 h3 {
-  padding-top: 8px;
+  padding: 8px 0;
+  max-width: 200px;
 }
 main {
   margin: 0 auto;
@@ -67,6 +68,13 @@ main {
 }
 main article {
   padding: 16px 0;
+}
+main article span {
+  color: blue;
+  text-decoration: underline;
+}
+main article img {
+  padding: 8px 0;
 }
 footer {
   padding: 16px;
@@ -97,6 +105,9 @@ footer a {
 }
 @media only screen and (min-width:768px) {
   header {
-    height: 500px;
+    height: 300px;
+  }
+  header div {
+    margin-top: 50px;
   }
 }
