@@ -1,11 +1,9 @@
-.displayNone {
-  display: none;
-}
-.clear {
-  float: none;
-  clear: both;
-}
+/**elements**/
+/**classes**/
+/**ids**/
+/**media queries**/
 
+/**elements**/
 html,
 header,
 main,
@@ -19,41 +17,86 @@ footer {
 
 header {
   width: 100%;
+  height: 300px;
   background-image: url('../img/header-background.jpg');
   background-position: center;
   background-size: fill;
 }
-form {
+h1,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+header div {
   display: block;
   max-width: 300px;
-  margin: 0 auto;
-
+  margin: 2em auto;
 }
+header div label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25em;
+  color: white;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+header div select {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
 h1 {
   text-align: center;
   color: white;
 }
+h2 {
+  width: 90%;
+  font-size: 1.125em;
+  border-bottom: 2px solid red;
+}
+h3 {
+  padding-top: 8px;
+}
 main {
   margin: 0 auto;
+  padding: 8px;
   width: 100%;
   max-width: 1020px;
 }
-main article {}
-main article h2 {
-  width: 90%;
-  border-bottom: 2px solid red;
+main article {
+  padding: 16px 0;
 }
-main article h3 {}
 footer {
-  padding: 8px;
+  padding: 16px;
   text-align: center;
   background-color: black;
   color: white;
 }
 
-@media only screen and (min-width:768px) {
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/**classes**/
+.displayNone {
+  display: none;
+}
+
+/**ids**/
+/**media queries**/
+
+
+@media only screen and (min-width:500px) {
   main article {
     width: 50%;
     float: left;
+  }
+}
+@media only screen and (min-width:768px) {
+  header {
+    height: 500px;
   }
 }

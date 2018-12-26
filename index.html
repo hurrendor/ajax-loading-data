@@ -11,7 +11,8 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -21,13 +22,15 @@
   <header class="clear">
 
     <h1>Countries 'R Us</h1>
-      <label for="dropdown">I want to.. <span class="fa fa-search displayNone"></span></label>
+    <div>
+      <label for="dropdown">I want to explore.. </label>
       <select id="dropdown" name="dropdown" onchange="loadData()">
         <option name="default" value="null">...</option>
-        <option name="xml" value="xml">Explore Countries</option>
-        <option name="json" value="json">Find Travel Gear</option>
-        <option name="html" value="html">Visit Kenya</option>
+        <option name="xml" value="kenya">Kenya</option>
+        <option name="json" value="china">China</option>
+        <option name="html" value="italy">Italy</option>
       </select>
+    </div>
   </header>
 
   <main class="clear" id="main">
