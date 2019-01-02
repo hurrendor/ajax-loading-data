@@ -1,39 +1,52 @@
 {
-  "country": {
-    "name" : {
-      "kenya" : {
-          "Maasai Mara" : {
-            "description" : "Maasai Mara National Reserve is an area of preserved savannah wilderness in southwestern Kenya, along the Tanzanian border."
+  "country" : {
+    "kenya" : {
+      "location" : [
+        {
+          "name":  "Maasai Mara",
+          "description" : "Maasai Mara National Reserve is an area of preserved savannah wilderness in southwestern Kenya, along the Tanzanian border."
         },
-          "Aboseli National Park" : {
-            "description" : "Natural area with abundant wildlife, including free-ranging elephants & 600 species of birds."
+        {
+          "name" : "Aboseli National Park",
+          "description" : "Natural area with abundant wildlife, including free-ranging elephants & 600 species of birds."
         },
-          "Lake Nakuru" : {
-            "description" : "This Rift Valley soda lake in Lake Nakuru National Park features flamingos, rhinoceroses & more."
+        {
+          "name" : "Lake Nakuru",
+          "description" : "This Rift Valley soda lake in Lake Nakuru National Park features flamingos, rhinoceroses & more."
           }
-        },
-      "china" : {
-          "Great Wall of China" : {
-            "description" : "Ancient world wonder that winds for more than 5,500 miles across China, with towers & walkways."
-        },
-          "Forbidden City" : {
-            "description" : "Massive palace complex & museum featuring tours, art exhibits & restaurants."
-        },
-          "TerracottaArmy" : {
-            "description" : "Attraction renowned for lifelike sculptures of terra-cotta warriors built around the 3rd century BC."
-        }
+        ]
       },
-      "italy" : {
-          "Colosseum" : {
-            "description" : "Monumental 3-tiered Roman amphitheater once used for gladiatorial games, with guided tour option."
-        },
-          "Amalfi Coast" : {
-            "description" : "UNESCO-listed landscape lined with small towns precariously perched between mountains & the sea."
-        },
-          "Florence Cathedral" : {
-            "description" : "Landmark 1200s cathedral known for its red-tiled dome, colored marble facade & elegant Giotto tower."
-        }
+    "china" : {
+      "location" : [
+        {
+          "name":  "Great Wall of China",
+          "description" : "Ancient world wonder that winds for more than 5,500 miles across China, with towers & walkways."
+      },
+      {
+        "name":  "Forbidden City",
+          "description" : "Massive palace complex & museum featuring tours, art exhibits & restaurants."
+      },
+      {
+        "name":  "Terracotta Army",
+          "description" : "Attraction renowned for lifelike sculptures of terra-cotta warriors built around the 3rd century BC."
       }
+    ]
+    },
+    "italy" : {
+      "location" : [
+        {
+          "name": "Colosseum",
+          "description" : "Monumental 3-tiered Roman amphitheater once used for gladiatorial games, with guided tour option."
+      },
+      {
+        "name": "Amalfi Coast",
+          "description" : "UNESCO-listed landscape lined with small towns precariously perched between mountains & the sea."
+      },
+      {
+        "name": "Florence Cathedral",
+          "description" : "Landmark 1200s cathedral known for its red-tiled dome, colored marble facade & elegant Giotto tower."
+      }
+      ]
     }
   }
 }
