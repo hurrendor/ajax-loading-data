@@ -9,14 +9,12 @@ function loadJSON() {
       // responseObject = (jsonSetup.responseText[i]).toString();
 
       var newContent = '';
-      // for (var i = 0; i < responseObject.country.length; i++) {
-      for ( i in responseObject.country) {
-        console.log(responseObject.country[i]);
+      newContent += "<h2>Explore Italy</h2>";
+      for ( i in responseObject.location) {
+        console.log(responseObject.location[i]);
         newContent += '<article>';
-        for ( l in responseObject.country[i].location){
-          newContent += '<h3>' + responseObject.country[i].location[l].name + '</h3>';
-          newContent += '<p>' + responseObject.country[i].location[l].description + '</p>';
-        }
+          newContent += '<h3>' + responseObject.location[i].name + '</h3>';
+          newContent += '<p>' + responseObject.location[i].description + '</p>';
         newContent += '</article>';
       }
 
