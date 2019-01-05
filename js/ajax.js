@@ -5,8 +5,6 @@ function loadJSON() {
   jsonSetup.onload = function() {
     if(jsonSetup.status === 200) {;
       responseObject = JSON.parse(jsonSetup.responseText);
-      // console.log(jsonSetup.responseText);
-      // responseObject = (jsonSetup.responseText[i]).toString();
 
       var newContent = '';
       newContent += "<h2>Explore Italy</h2>";
@@ -25,11 +23,38 @@ function loadJSON() {
   jsonSetup.send(null);
 };
 
+
+/**XML**/
+
+//gets the content of each XML element
+function getNodeValue(obj, tag) {
+  return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
+}
+
+
 function loadXML() {
   var xmlSetup = new XMLHttpRequest();
+  var location, lname, latitude, longitude; //variable setup
+
+  //grab map of kenya
+  var countryMap = '<figure id="country-map"><img src="img/country-map.png">';
+  // var countryMap = document.createElement('img');
+  // countryMap.setAttribute('src','img/kenya.jpg');
+  // countryMap.setId('id', 'country-map');
+  console.log(countryMap);
+  document.getElementById('main').innerHTML = countryMap;
   xmlSetup.onload = function() {
     if(xmlSetup.status === 200) {
-      console.log(xmlSetup.responseText);
+
+      var response = xmlSetup.responseXML; //setup XML // returns...??
+      var locations = response.getElementsByTagName('locations');
+      console.log(xmlSetup.responseText, locations);
+      for (var i = 0; i < locations.length; i++){
+        var tempVar = document.createElement('span').addClass('fa fa-map-pin');
+        tempVar.style.position = 'relative';
+      }
+      // location =
+
     }
   }
   xmlSetup.open('GET', 'data/data.xml', true);

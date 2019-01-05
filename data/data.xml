@@ -1,17 +1,17 @@
-<country>
+<locations>
   <location>
-    <name>Maasai Mara</name>
+    <lname>Maasai Mara</lname>
     <longitude>75</longitude>
     <latitude>49</latitude>
   </location>
   <location>
-    <name>Aboseli National Park</name>
+    <lname>Aboseli National Park</lname>
     <longitude>54</longitude>
     <latitude>34</latitude>
   </location>
   <location>
-    <name>Lake Nakuru</name>
+    <lname>Lake Nakuru</lname>
     <longitude>35</longitude>
     <latitude>57</latitude>
   </location>
-</country>
+</locations>
