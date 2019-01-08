@@ -37,21 +37,22 @@ function loadXML() {
   var location, lname, latitude, longitude; //variable setup
 
   //grab map of kenya
-  var countryMap = '<figure id="country-map"><img src="img/country-map.png">';
-  // var countryMap = document.createElement('img');
-  // countryMap.setAttribute('src','img/kenya.jpg');
-  // countryMap.setId('id', 'country-map');
-  console.log(countryMap);
+  var countryMap = '<figure id="country-map"><img src="img/country-map.png"><caption id="country-locations"><p></p></caption></figure>';
   document.getElementById('main').innerHTML = countryMap;
   xmlSetup.onload = function() {
     if(xmlSetup.status === 200) {
 
       var response = xmlSetup.responseXML; //setup XML // returns...??
       var locations = response.getElementsByTagName('locations');
-      console.log(xmlSetup.responseText, locations);
+      // console.log(xmlSetup.responseText, locations);
       for (var i = 0; i < locations.length; i++){
-        var tempVar = document.createElement('span').addClass('fa fa-map-pin');
-        tempVar.style.position = 'relative';
+        let locationPointer = document.createElement('span');
+        locationPointer.classList.add('fa');
+        locationPointer.classList.add('fa-map-pin');
+        locationPointer.style.top = locations[i].longitude;
+        locationPointer.style.left = locations[i].latitude;
+        console.log('locationPointer', locationPointer);
+        document.getElementById('country-map').append(locationPointer);
       }
       // location =
 
@@ -92,17 +93,17 @@ function loadData() {
   var country = selectForm.value;
   console.log(country);
   switch(country) {
-    case 'kenya':
+    case 'china':
     loadHTML();
-    console.log('kenya');
     break;
 
     case 'italy':
     loadJSON();
     break;
 
-    case 'china':
+    case 'kenya':
     loadXML();
+    console.log('kenya');
     break;
 
     default:

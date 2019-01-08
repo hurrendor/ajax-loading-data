@@ -76,6 +76,8 @@ main article span {
 main article img {
   padding: 8px 0;
 }
+
+
 footer {
   padding: 16px;
   text-align: center;
@@ -94,6 +96,20 @@ footer a {
 }
 
 /**ids**/
+
+/**Map Styling**/
+#country-map {
+  position: relative;
+  height: 400px;
+}
+#country-map img {
+  position: absolute;
+}
+#country-map span {
+  position: absolute;
+}
+
+
 /**media queries**/
 
 
@@ -109,5 +125,9 @@ footer a {
   }
   header div {
     margin-top: 50px;
+  }
+  #country-map caption {
+    position: relative;
+    left: 408px;
   }
 }
