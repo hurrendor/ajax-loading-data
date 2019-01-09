@@ -36,22 +36,25 @@ function loadXML() {
   var xmlSetup = new XMLHttpRequest();
   var location, lname, latitude, longitude; //variable setup
 
-  //grab map of kenya
+  //grab map of country
   var countryMap = '<figure id="country-map"><img src="img/country-map.png"><caption id="country-locations"><p></p></caption></figure>';
   document.getElementById('main').innerHTML = countryMap;
   xmlSetup.onload = function() {
     if(xmlSetup.status === 200) {
 
       var response = xmlSetup.responseXML; //setup XML // returns...??
-      var locations = response.getElementsByTagName('locations');
-      // console.log(xmlSetup.responseText, locations);
+      var locations = response.getElementsByTagName('location');
+
       for (var i = 0; i < locations.length; i++){
+        // console.log(getNodeValue(locations[i], 'longitude'), locations);
+        // console.log(getNodeValue(locations[i], 'longitude'));
         let locationPointer = document.createElement('span');
+        console.log(typeof locationPointer);
         locationPointer.classList.add('fa');
         locationPointer.classList.add('fa-map-pin');
-        locationPointer.style.top = locations[i].longitude;
-        locationPointer.style.left = locations[i].latitude;
-        console.log('locationPointer', locationPointer);
+        locationPointer.style.top = (getNodeValue(locations[i], 'longitude') + 'px');
+        locationPointer.style.left = (getNodeValue(locations[i], 'latitude') + 'px');
+        // console.log('locationPointer', locationPointer);
         document.getElementById('country-map').append(locationPointer);
       }
       // location =
