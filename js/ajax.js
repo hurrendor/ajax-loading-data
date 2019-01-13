@@ -37,7 +37,7 @@ function loadXML() {
   var location, lname, latitude, longitude; //variable setup
 
   //grab map of country
-  var countryMap = '<figure id="country-map"><img src="img/country-map.png"><caption id="country-locations"><p></p></caption></figure>';
+  var countryMap = '<figure id="country-map"><img src="img/country-map.png"><figcaption id="country-locations"><h2>Locations to Visit In Kenya</h2></figcaption></figure>';
   document.getElementById('main').innerHTML = countryMap;
   xmlSetup.onload = function() {
     if(xmlSetup.status === 200) {
@@ -46,19 +46,19 @@ function loadXML() {
       var locations = response.getElementsByTagName('location');
 
       for (var i = 0; i < locations.length; i++){
-        // console.log(getNodeValue(locations[i], 'longitude'), locations);
-        // console.log(getNodeValue(locations[i], 'longitude'));
         let locationPointer = document.createElement('span');
-        console.log(typeof locationPointer);
         locationPointer.classList.add('fa');
         locationPointer.classList.add('fa-map-pin');
         locationPointer.style.top = (getNodeValue(locations[i], 'longitude') + 'px');
         locationPointer.style.left = (getNodeValue(locations[i], 'latitude') + 'px');
-        // console.log('locationPointer', locationPointer);
-        document.getElementById('country-map').append(locationPointer);
-      }
-      // location =
+        document.getElementById('country-map').appendChild(locationPointer);
 
+        let locationCaption = document.createElement('p');
+        let innerTextNode =  ("Location #" + (i+1) + ": " + getNodeValue(locations[i], 'lname'));
+        locationCaption.innerText = innerTextNode;
+        console.log(document.getElementById('country-locations'));
+        document.getElementById('country-locations').appendChild(locationCaption);
+      }
     }
   }
   xmlSetup.open('GET', 'data/data.xml', true);
@@ -70,15 +70,12 @@ function loadXML() {
 
 function loadHTML() {
   var htmlSetup = new XMLHttpRequest();
-  // var jsonSetup = new XMLHttpRequest();
-  // var xmlSetup = new XMLHttpRequest();
   var country = selectForm.value;
 
 
   htmlSetup.onload = function(){
     console.log('htmlsetup.onload structured');
     if(htmlSetup.status === 200) { //will not work locally, only on a server
-      // console.log(htmlSetup.responseText);
       document.getElementById('main').innerHTML = htmlSetup.responseText;
     }
   };
