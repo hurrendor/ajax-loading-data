@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<locations>
+  <location>
+    <lname>Maasai Mara</lname>
+    <longitude>300</longitude>
+    <latitude>196</latitude>
+  </location>
+  <location>
+    <lname>Aboseli National Park</lname>
+    <longitude>216</longitude>
+    <latitude>136</latitude>
+  </location>
+  <location>
+    <lname>Lake Nakuru</lname>
+    <longitude>140</longitude>
+    <latitude>228</latitude>
+  </location>
+</locations>

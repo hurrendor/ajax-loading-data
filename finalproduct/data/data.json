@@ -1,0 +1,16 @@
+{
+  "location" : [
+    {
+      "name": "Colosseum",
+      "description" : "Monumental 3-tiered Roman amphitheater once used for gladiatorial games, with guided tour option."
+    },
+    {
+      "name": "Amalfi Coast",
+        "description" : "UNESCO-listed landscape lined with small towns precariously perched between mountains & the sea."
+    },
+    {
+      "name": "Florence Cathedral",
+        "description" : "Landmark 1200s cathedral known for its red-tiled dome, colored marble facade & elegant Giotto tower."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Countries 'R Us</title>
+  <meta name="description" content="A mini-site designed to be a resource for the Loading Data with AJAX class.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="clear">
+
+  <header class="clear">
+
+    <h1>Countries 'R Us</h1>
+    <div>
+      <label for="dropdown">I want to explore.. </label>
+      <select id="dropdown" name="dropdown" onchange="loadData()">
+        <option name="default" selected="selected" value="null">...</option>
+        <option name="html" value="china">China</option>
+        <option name="json" value="italy">Italy</option>
+        <option name="xml" value="kenya">Kenya</option>
+        <option name="jQuery" value="uruguay">Uruguay</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="clear" id="main">
+    <article>
+      <h2>Country of the Week</h2>
+      <h3>Ukraine</h3>
+      <img src="img/ukraine-cathedral.jpg" alt="Country of the Week: Ukraine" />
+      <p>Ukraine is a large country in Eastern Europe known for its Orthodox churches, Black Sea coastline and forested mountains. Its capital, Kiev, features the gold-domed St. Sophia's Cathedral, with 11th-century mosaics and [<span>...</span>]</p>
+    </article>
+    <article>
+      <h2>Nomad Storytime</h2>
+      <h3>Why I Moved in With a Pack of Wild Dogs</h3>
+      <img src="img/woman-with-dogs.jpg" alt="Woman With Dogs" />
+      <p>The call of the wild had been in my blood for ages. After much setback in my life, I [<span>...</span>] </p>
+    </article>
+
+
+  </main>
+
+  <footer class="clear">
+    <p><a href="https://hurrendor.com" target="_blank">&copy; Stacy Davis <script></script></a></p>
+  </footer>
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async src="js/ajax.js"></script>
+
+
+</body>
+
+</html>

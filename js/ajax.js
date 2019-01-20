@@ -14,7 +14,7 @@ function loadData() {
 
     case 'italy':
     loadJSON();
-    break;
+    break;a
 
     case 'kenya':
     loadXML();
@@ -116,3 +116,8 @@ function loadXML() {
   xmlSetup.open('GET', 'data/data.xml', true);
   xmlSetup.send(null);
 };
+
+
+/**Error Handling**/
+
+/**jQuery**/
