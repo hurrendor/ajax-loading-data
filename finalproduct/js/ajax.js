@@ -1,7 +1,7 @@
 /**Variable Setup**/
 
-var responseObject;
-var selectForm = document.getElementById('dropdown');
+let responseObject;
+const selectForm = document.getElementById('dropdown');
 
 //Pull information based on what country is selected
 function loadData() {
