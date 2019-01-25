@@ -21,6 +21,10 @@ function loadData() {
     // console.log('kenya');
     break;
 
+    case 'uruguay':
+    loadWithJQuery();
+    break;
+
     default:
     // console.log('default called');
     break;
@@ -121,3 +125,20 @@ function loadXML() {
 /**Error Handling**/
 
 /**jQuery**/
+
+function loadWithJQuery() {
+  $('#main').load('./uruguay.html'); //loads HTML snippets only
+        //specific snippet - #uruguay-image
+    //load in some different data (JSON)
+    //$.getJSON(url [, data][, success]);
+    $.getJSON('data/uruguay.json')
+    .done( function(data) {
+      $('#main').append
+      $.each( data.location, function (i, location) {
+        $('<h2>').text(data.location[i].name).appendTo('#uruguay-info');
+        $('<p>').text(data.location[i].description).appendTo('#uruguay-info');
+      })
+    }).fail( function() {
+      $('#main').innerText = "<h2>" + err + " Sorry, you can't go to Uruguay";
+    })
+}

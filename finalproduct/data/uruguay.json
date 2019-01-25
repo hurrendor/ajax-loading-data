@@ -1,0 +1,16 @@
+{
+  "location" : [
+    {
+      "name": "Plaza Independencia",
+      "description" : "laza Independencia is the name of Montevideo's most important plaza. It separates Ciudad Vieja from downtown Montevideo, with the Gateway of The Citadel on one side and the beginning of 18 de Julio avenue on the other. In the center, the Artigas Mausoleum dominates the perspective."
+    },
+    {
+      "name": "Pocitos",
+        "description" : "Pocitos is an upscale beach barrio in Uruguay's capital city, Montevideo."
+    },
+    {
+      "name": "Ciudad Vieja",
+        "description" : "Ciudad Vieja draws visitors for its history and cultural museums and grand, centuries-old landmarks. These include the neoclassical Metropolitan Cathedral, which overlooks quaint Plaza Matriz, and Solis Theatre with its diverse performing arts program. Lively steakhouses fill up quickly at the Mercado del Puerto indoor market. The area is also a nightlife hub, offering a mix of hip cocktail bars and old-school cafes."
+    }
+  ]
+}
