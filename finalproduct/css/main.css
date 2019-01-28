@@ -128,14 +128,6 @@ footer a {
 
 
 @media only screen and (min-width:500px) {
-  main article {
-    width: 50%;
-    float: left;
-  }
-  #country-map figcaption {
-    position: relative;
-    left: 410px;
-  }
 }
 @media only screen and (min-width:768px) {
   header {
@@ -149,8 +141,12 @@ footer a {
     float: left;
     width: 50%;
   }
-  article {
-    display: block;
+  main article {
     width: 50%;
+    float: left;
+  }
+  #country-map figcaption {
+    position: relative;
+    left: 410px;
   }
 }

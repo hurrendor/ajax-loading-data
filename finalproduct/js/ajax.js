@@ -6,7 +6,6 @@ const selectForm = document.getElementById('dropdown');
 //Pull information based on what country is selected
 function loadData() {
   var country = selectForm.value;
-  // console.log(country);
   switch(country) {
     case 'china':
     loadHTML();
@@ -18,7 +17,6 @@ function loadData() {
 
     case 'kenya':
     loadXML();
-    // console.log('kenya');
     break;
 
     case 'uruguay':
@@ -26,19 +24,18 @@ function loadData() {
     break;
 
     default:
-    // console.log('default called');
     break;
   }
 };
 
 /**HTML**/
+/**Will load data for China**/
 function loadHTML() {
   var htmlSetup = new XMLHttpRequest();
   var country = selectForm.value;
 
 
   htmlSetup.onload = function(){
-    // console.log('htmlsetup.onload structured');
     if(htmlSetup.status === 200) { //will not work locally, only on a server
       document.getElementById('main').innerHTML = htmlSetup.responseText;
     }
@@ -51,6 +48,7 @@ function loadHTML() {
 
 
 /**JSON**/
+/**Loads data for Italy**/
 function loadJSON() {
   var jsonSetup = new XMLHttpRequest();
   jsonSetup.onload = function() {
@@ -60,7 +58,6 @@ function loadJSON() {
       var newContent = '';
       newContent += "<h2>Explore Italy</h2>";
       for ( i in responseObject.location) {
-        // console.log(responseObject.location[i]);
         newContent += '<article>';
           newContent += '<h3>' + responseObject.location[i].name + '</h3>';
           newContent += '<p>' + responseObject.location[i].description + '</p>';
@@ -79,8 +76,8 @@ function loadJSON() {
 /**XML**/
 /**
   This function set allows you to take information from the XML document
+  We'll start by getting the content of each XML element
 **/
-//We'll start by getting the content of each XML element
 function getNodeValue(obj, tag) {
   return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
 }
@@ -122,18 +119,14 @@ function loadXML() {
 };
 
 
-/**Error Handling**/
-
 /**jQuery**/
-
 function loadWithJQuery() {
   $('#main').load('./uruguay.html'); //loads HTML snippets only
         //specific snippet - #uruguay-image
+
     //load in some different data (JSON)
-    //$.getJSON(url [, data][, success]);
     $.getJSON('data/uruguay.json')
     .done( function(data) {
-      $('#main').append
       $.each( data.location, function (i, location) {
         $('<h2>').text(data.location[i].name).appendTo('#uruguay-info');
         $('<p>').text(data.location[i].description).appendTo('#uruguay-info');
