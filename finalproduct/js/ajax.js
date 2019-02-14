@@ -2,6 +2,7 @@
 
 let responseObject;
 const selectForm = document.getElementById('dropdown');
+const mainSpace = document.getElementById('main');
 
 //Pull information based on what country is selected
 function loadData() {
@@ -32,18 +33,15 @@ function loadData() {
 /**Will load data for China**/
 function loadHTML() {
   var htmlSetup = new XMLHttpRequest();
-  var country = selectForm.value;
-
 
   htmlSetup.onload = function(){
     if(htmlSetup.status === 200) { //will not work locally, only on a server
-      document.getElementById('main').innerHTML = htmlSetup.responseText;
+      mainSpace.innerHTML = htmlSetup.responseText;
     }
   };
 
   htmlSetup.open('GET', 'data/data.html', true);
   htmlSetup.send(null);
-  loadJSON();
 };
 
 
@@ -65,7 +63,7 @@ function loadJSON() {
       }
 
       //add the content to the page
-      document.getElementById('main').innerHTML = newContent;
+      mainSpace.innerHTML = newContent;
     }
   }
   jsonSetup.open('GET', 'data/data.json', true);
@@ -84,11 +82,10 @@ function getNodeValue(obj, tag) {
 
 function loadXML() {
   var xmlSetup = new XMLHttpRequest();
-  var location, lname, latitude, longitude; //variable setup
 
   //grab map of country and place on page
   var countryMap = '<figure id="country-map"><img src="img/country-map.png"><figcaption id="country-locations"><h2>Locations to Visit In Kenya</h2></figcaption></figure>';
-  document.getElementById('main').innerHTML = countryMap;
+  mainSpace.innerHTML = countryMap;
 
   xmlSetup.onload = function() {
     if(xmlSetup.status === 200) {
